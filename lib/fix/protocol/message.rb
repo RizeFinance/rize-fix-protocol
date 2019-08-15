@@ -11,7 +11,7 @@ module Fix
     class Message < MessagePart
 
       # Default version for when we do not specify anything
-      DEFAULT_VERSION = 'FIX.4.4'
+      DEFAULT_VERSION = 'FIX.4.2'
       @@expected_version = DEFAULT_VERSION
 
       #
