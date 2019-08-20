@@ -84,6 +84,7 @@ module Fix
           field :text,              tag: 58
           field :time_in_force,     tag: 59,  type: :integer, mapping: IN_FORCE_TIMES
           field :settlmnt_typ,      tag: 63,  mapping: SETTLEMENT_TYPES
+          field :symbol_sfx,        tag: 65
           field :min_qty,           tag: 110, type: :float
           field :max_floor,         tag: 111, type: :float
           field :security_type,     tag: 167
