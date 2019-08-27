@@ -28,11 +28,11 @@ module Fix
         field :body_length, tag: 9
 
         unordered :header_fields do
-          field :msg_seq_num,     tag: 34,  required: true, type: :integer
           field :msg_type,        tag: 35,  required: true
           field :sender_comp_id,  tag: 49,  required: true
-          field :sending_time,    tag: 52,  required: true, type: :timestamp, default: proc { Time.now }
           field :target_comp_id,  tag: 56,  required: true
+          field :msg_seq_num,     tag: 34,  required: true, type: :integer
+          field :sending_time,    tag: 52,  required: true, type: :timestamp, default: proc { Time.now }
           field :sender_sub_id,   tag: 50
           field :target_sub_id,   tag: 57
           field :obo_comp_id,     tag: 115
