@@ -40,6 +40,16 @@ module Fix
       end
 
       #
+      # Parses a float
+      #
+      # @param str [String] A float as a string
+      # @return [Fixnum] The parsed float
+      #
+      def parse_float(str)
+        str && str.to_f
+      end
+
+      #
       # Dumps an integer to a string
       #
       # @param i [Fixnum] An integer
