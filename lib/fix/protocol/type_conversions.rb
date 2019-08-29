@@ -36,7 +36,17 @@ module Fix
       # @return [Fixnum] The parsed integer
       #
       def parse_integer(str)
-        str && str.to_i
+        str&.to_i
+      end
+
+      #
+      # Parses a float
+      #
+      # @param str [String] A float as a string
+      # @return [Fixnum] The parsed float
+      #
+      def parse_float(str)
+        str&.to_f
       end
 
       #
