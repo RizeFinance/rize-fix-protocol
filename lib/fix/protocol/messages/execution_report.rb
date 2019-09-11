@@ -7,48 +7,47 @@ module Fix
       class ExecutionReport < FP::Message
 
         EXECUTION_TYPES = {
-          '0' => :new,
-          '1' => :partial_fill,
-          '2' => :filled,
-          '3' => :done_for_day,
-          '4' => :canceled,
-          '5' => :replace,
-          '6' => :pending_cancel,
-          '7' => :stopped,
-          '8' => :rejected,
-          '9' => :suspended,
-          'A' => :pending_new,
-          'B' => :calculated,
-          'C' => :expired,
-          'D' => :restated,
-          'E' => :pending_replace,
+          new: '0',
+          partial_fill: '1',
+          filled: '2',
+          done_for_day: '3',
+          canceled: '4',
+          replace: '5',
+          pending_cancel: '6',
+          stopped: '7',
+          rejected: '8',
+          suspended: '9',
+          pending_new: 'A',
+          calculated: 'B',
+          expired: 'C',
+          restated: 'D',
+          pending_replace: 'E'
         }
 
         ORDER_STATUSES = {
-          '0' => :new,
-          '1' => :partially_filled,
-          '2' => :filled,
-          '3' => :done_for_day,
-          '4' => :canceled,
-          '5' => :replaced,
-          '6' => :pending_cancel,
-          '7' => :stopped,
-          '8' => :rejected,
-          '9' => :suspended,
-          'A' => :pending_new,
-          'B' => :calculated,
-          'C' => :expired,
-          'D' => :accepted_for_bidding,
-          'E' => :pending_replace,
+          new: '0',
+          partially_filled: '1',
+          filled: '2',
+          done_for_day: '3',
+          canceled: '4',
+          replaced: '5',
+          pending_cancel: '6',
+          stopped: '7',
+          rejected: '8',
+          suspended: '9',
+          pending_new: 'A',
+          calculated: 'B',
+          accepted_for_bidding: 'C',
+          restated: 'D',
+          pending_replace: 'E'
         }
 
         TRANSACTION_TYPES = {
-          '0' => :new,
-          '1' => :cancel,
-          '2' => :correct,
-          '3' => :Status
+          new: '0',
+          cancel: '1',
+          correct: '2',
+          status: '3'
         }
-
 
         unordered :body do
           field :avg_px,          tag: 6,   type: :float
